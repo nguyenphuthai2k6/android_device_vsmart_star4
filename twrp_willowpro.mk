@@ -35,7 +35,7 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$device/vsmart/willowpro_o
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := willowpro_open
-PRODUCT_DEVICE := twrp_willowpro
+PRODUCT_DEVICE := willowpro
 PRODUCT_MODEL := Star 4
 PRODUCT_BRAND := vsmart
 PRODUCT_MANUFACTURER := vsmart
