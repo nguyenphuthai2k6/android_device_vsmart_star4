@@ -25,7 +25,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/vsmart/willowpro_open/device.mk)
+$(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Charger
 PRODUCT_PACKAGES += \
