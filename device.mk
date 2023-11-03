@@ -14,6 +14,14 @@
 # limitations under the License.
 #
 
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 30
+
+# API
+PRODUCT_SHIPPING_API_LEVEL := 30
+
+PRODUCT_PLATFORM := mt6765
+
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
