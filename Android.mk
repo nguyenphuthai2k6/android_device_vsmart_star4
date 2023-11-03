@@ -14,10 +14,9 @@
 # limitations under the License.
 #
 
-ifneq ($(filter willowpro, $(TARGET_DEVICE)),)
-
 LOCAL_PATH := $(call my-dir)
 
+ifneq ($(TARGET_DEVICE), willowpro)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 endif
