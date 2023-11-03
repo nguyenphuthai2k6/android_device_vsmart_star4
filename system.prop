@@ -752,8 +752,8 @@ ro.product.system_ext.device=willowpro
 ro.product.system_ext.manufacturer=vsmart
 ro.product.system_ext.model=Star 4
 ro.product.system_ext.name=willowpro_open
-ro.hardware=mt6xxx
-ro.mediatek.platform=6xxx
+ro.hardware=mt6765
+ro.mediatek.platform=6765
 # end common build properties
 #
 # ADDITIONAL SYSTEM_EXT BUILD PROPERTIES
