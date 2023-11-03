@@ -13,10 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-DEVICE_PATH := device/vsmart/willowpro_open
+DEVICE_PATH := device/vsmart/willowpro
 
 # Release name
-PRODUCT_RELEASE_NAME := willowpro_open
+PRODUCT_RELEASE_NAME := vsmart Star 4
 
 # Inherit from common AOSP config
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
@@ -34,8 +34,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery/root,recovery/root)
 
 ## Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := willowpro
 PRODUCT_NAME := twrp_willowpro
-PRODUCT_DEVICE := willowpro_open
 PRODUCT_MODEL := Star 4
 PRODUCT_BRAND := vsmart
 PRODUCT_MANUFACTURER := vsmart
