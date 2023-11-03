@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/vsmart/willowpro_open
+DEVICE_PATH := device/vsmart/willowpro
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
