@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-DEVICE_PATH := device/vsmart/willowpro_open
+DEVICE_PATH := device/vsmart/willowpro
 
 # Release name
 PRODUCT_RELEASE_NAME := vsmart Star 4
