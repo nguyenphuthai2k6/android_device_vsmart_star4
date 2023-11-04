@@ -1,4 +1,4 @@
-MKBOOTIMG := device/vsmart/willowpro/mkbootimg
+MKBOOTIMG := device/vsmart/willowpro_open/mkbootimg
 
 FLASH_IMAGE_TARGET ?= $(PRODUCT_OUT)/recovery.img
 
