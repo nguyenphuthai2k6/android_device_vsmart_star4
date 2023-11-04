@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+LOCAL_PATH := device/vsmart/willowpro
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
 
