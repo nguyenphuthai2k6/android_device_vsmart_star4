@@ -1,0 +1,3 @@
+add_lunch_combo twrp_willowpro-user
+add_lunch_combo twrp_willowpro-userdebug
+add_lunch_combo twrp_willowpro-eng
