@@ -16,6 +16,9 @@
 
 LOCAL_PATH := device/vsmart/willowpro
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
 
@@ -50,6 +53,7 @@ PRODUCT_PACKAGES += \
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_BUILD_SUPER_PARTITION := true
 
 # fastbootd
 PRODUCT_PACKAGES += \
