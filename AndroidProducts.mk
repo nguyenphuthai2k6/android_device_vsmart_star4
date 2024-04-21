@@ -16,8 +16,3 @@
 
 PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/twrp_willowpro.mk
-
-COMMON_LUNCH_CHOICES := \
-	twrp_willowpro-user \
-	twrp_willowpro-userdebug \
-	twrp_willowpro-eng
