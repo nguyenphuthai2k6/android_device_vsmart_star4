@@ -68,10 +68,19 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 
+# Dynamic Partition
+BOARD_SUPER_PARTITION_SIZE := 6685720576
+BOARD_SUPER_PARTITION_GROUPS := main
+BOARD_MAIN_SIZE := 6681526272
+BOARD_MAIN_PARTITION_LIST  := product vendor system
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
+
+# System as root
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -79,6 +88,12 @@ BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_INCLUDE_NTFS_3G := true
+
+# Metadata
+BOARD_USES_METADATA_PARTITION := true
+BOARD_ROOT_EXTRA_FOLDERS += metadata
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
@@ -97,6 +112,19 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 # Platform
 TARGET_BOARD_PLATFORM := mt6765
 TARGET_BOARD_PLATFORM_GPU := PowerVR GE8320
+
+# Additional binaries & libraries needed for recovery
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libkeymaster4 \
+    libpuresoftkeymasterdevice \
+    ashmemd_aidl_interface-cpp \
+    libashmemd_client
+
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so
 
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -117,6 +145,15 @@ TW_USE_TOOLBOX := true
 TARGET_USES_MKE2FS := true
 
 TARGET_COPY_OUT_VENDOR := vendor
+
+# Display
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_MAX_BRIGHTNESS := 2047
+TW_DEFAULT_BRIGHTNESS := 1200
+TW_SCREEN_BLANK_ON_BOOT := true
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+TW_Y_OFFSET := 50
+TW_H_OFFSET := -50
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
